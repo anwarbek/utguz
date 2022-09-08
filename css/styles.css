@@ -1,3 +1,111 @@
+@font-face {
+  font-family: "Golos Text VF";
+  src: url("../fonts/GolosTextVF-Regular.woff2") format("woff2"),
+  url("../fonts/GolosTextVF-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Golos Text";
+  src: url("../fonts/GolosText-Bold.woff2") format("woff2"),
+  url("../fonts/GolosText-Bold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Golos Text";
+  src: url("../fonts/GolosText-Black.woff2") format("woff2"),
+  url("../fonts/GolosText-Black.woff") format("woff");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Golos Text";
+  src: url("../fonts/GolosText-Medium.woff2") format("woff2"),
+  url("../fonts/GolosText-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Golos Text";
+  src: url("../fonts/GolosText-DemiBold.woff2") format("woff2"),
+  url("../fonts/GolosText-DemiBold.woff") format("woff");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Golos Text";
+  src: url("../fonts/GolosText-Regular.woff2") format("woff2"),
+  url("../fonts/GolosText-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Golos Text VF";
+  src: url("../fonts/GolosTextVF-Regular.woff2") format("woff2"),
+  url("../fonts/GolosTextVF-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Golos Text";
+  src: url("../fonts/GolosText-Bold.woff2") format("woff2"),
+  url("../fonts/GolosText-Bold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Golos Text";
+  src: url("../fonts/GolosText-Black.woff2") format("woff2"),
+  url("../fonts/GolosText-Black.woff") format("woff");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Golos Text";
+  src: url("../fonts/GolosText-Medium.woff2") format("woff2"),
+  url("../fonts/GolosText-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Golos Text";
+  src: url("../fonts/GolosText-DemiBold.woff2") format("woff2"),
+  url("../fonts/GolosText-DemiBold.woff") format("woff");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Golos Text";
+  src: url("../fonts/GolosText-Regular.woff2") format("woff2"),
+  url("../fonts/GolosText-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
 /* GLOBAL */
 html {
   box-sizing: border-box;
@@ -17,7 +125,7 @@ body {
   height: 100%;
   padding: 0;
   margin: 0;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Golos Text", Arial, Helvetica, sans-serif;
   font-size: 16px;
   line-height: 1.5;
   background-color: #fff;
@@ -46,22 +154,69 @@ img {
   flex-grow: 1;
 }
 
+.marquee-container {
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  background: #25284c;
+  overflow: hidden;
+}
+
+.marquee {
+  margin: 0;
+  padding: 0;
+  font-size: 12px;
+  line-height: 1.1;
+  font-style: italic;
+  font-family: sans-serif;
+  padding: 3px 0;
+  color: #fff;
+  white-space: nowrap;
+  animation: marquee 30s infinite linear;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0)
+  }
+  
+  100% {
+    transform: translateX(600%)
+  }
+}
+
 .site-header {
-  background-color: #489BCD;
-  border-bottom: 3px solid red;
+  background-color: #fff;
+  
 }
 
 .header-item {
   padding: 20px 0;
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  color: #fff;
+  align-items: flex-end;
+  color: #000;
 }
 
 .site-logo {
-  width: 250px;
+  width: 150px;
+  height: 124px;
   display: flex;
+}
+
+.site-header-title {
+  margin: 0;
+  padding: 0;
+  font-size: 25px;
+  text-align: center;
+  color: #3E60A9;
+}
+
+.site-header-title-item {
+  margin: 0;
+  padding: 0;
+  font-size: 40px;
+  
 }
 
 .contacts {
@@ -70,54 +225,36 @@ img {
   align-items: flex-end;
 }
 
-.phone {
-  padding: 0;
-  margin: 0;
-  margin-bottom: 10px;
-}
-
-.tel {
-  padding: 0;
-  margin: 0;
-  text-decoration: none;
-  color: #fff;
-}
-
-.tel:hover {
-  color: #ff1;
-}
-
 .social-list {
   padding: 0;
   margin: 0;
-  margin-top: 10px;
-  display: flex;
   list-style: none;
 }
 
-.social-list-item {}
-
 .social-list-item:not(:last-child) {
-  margin-right: 10px;
+  margin-bottom: 10px;
 }
 
 .social-link {
   display: flex;
 }
 
-.social-icon {}
+.social-icon {
+  border-radius: 5px;
+}
 svg {
-  fill: #fff;
+  fill: rgb(95, 95, 95);
 }
 svg:hover {
-  fill: #ff1;
+  fill: #3E60A9;
 }
 
 /* SITENAV */
 .sitenav {
   padding: 10px 0;
   margin: 0;
-  background-color: #ebecec;
+  background-color: #216AF2;
+  border-bottom: 8px solid #439909;
 }
 
 .sitenav__list {
@@ -128,25 +265,26 @@ svg:hover {
   list-style: none;
 }
 
-.sitenav__item {
+.sitenav__item:not(:last-child) {
+  padding-right: 10px;
 }
 
 .sitenav__link {
+  font-style: 16px;
+  font-weight: 500;
+  line-height: 1.5;
   text-decoration: none;
-  color: black;
+  color: #fff;
 }
 
 .sitenav__link:hover {
-  color: red;
-}
-
-.sitenav__link:not(last-child) {
-  padding-right: 10px;
+  padding-bottom: 5px;
+  border-bottom: 3px solid #fff;
 }
 
 
 .main-content {
-  margin: 20px 0;
+  margin: 40px 0;
   padding: 0;
 }
 
@@ -165,9 +303,9 @@ svg:hover {
 }
 
 .news-header {
-  margin: 0;
-  margin-bottom: 20px;
+  margin: 0 0 20px;
   padding: 0;
+  font-size: 18px;
 }
 
 .news-img {
@@ -188,33 +326,54 @@ svg:hover {
 }
 
 .sidebar-title {
+  position: relative;
   margin: 0;
   margin-bottom: 30px;
-  padding: 0;
+  padding: 0 0 0 30px;
   padding-bottom: 20px;
-  border-bottom: 2px solid #000;
+  border-bottom: 3px solid #216AF2;
 }
 
-.sidebar-text {}
+.sidebar-title::before {
+  content: "";
+  position: absolute;
+  top: 5px;
+  left: 0;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: #216af2;
+}
+.sidebar-title::after {
+  content: "";
+  position: absolute;
+  top: 8.5px;
+  left: 3.5px;
+  width: 13px;
+  height: 13px;
+  border-radius: 50%;
+  background-color: #439909;
+}
 
 .sidebar-text {
-  margin: 0;
-  margin-bottom: 20px;
-  padding: 0;
-  padding-bottom: 20px;
-  font-size: 13px;
+  margin: 0 0 20px;
+  padding: 0 0 20px;
+  font-size: 14px;
+  line-height: 1.5;
+  font-weight: 600;
+  font-family: "Golos Text";
+  border-bottom: 2px solid #216AF2;
   text-transform: uppercase;
-  border-bottom: 2px solid #ddd;
+  text-decoration: none;
+  color: #000;
 }
 
 /* FOOTER */
 .footer {
-  color: #fff;
-  background-color: #7cbf0f;
-  border-top: 3px solid red;
+  color: #000;
+  background-color: #439909;
+  border-top: 8px solid #216AF2;
 }
-
-.container {}
 
 .footer-content {
   margin: 0;
@@ -223,42 +382,18 @@ svg:hover {
   justify-content: space-between;
 }
 
-.logo-copyright {
-}
-
-.site-logo {}
-
 .copyright {
-  margin: 0;
-  margin-top: 20px;
+  margin: 20px 0 0;
   padding: 0;
-}
-
-.footer-nav {
-  display: flex;
-  flex-direction: column;
-}
-
-.footer-nav a {
+  font-size: 12px;
   color: #fff;
 }
 
-.footer-nav a:not(last-child) {
-  margin-bottom: 10px;
-}
-
-.footer-nav a:hover {
-  color: #ff1;
-}
-
 .footer-contacts {
+  margin: 45px 0 0;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   align-items: start;
-}
-
-.contacts {
 }
 
 .address {
@@ -273,9 +408,50 @@ svg:hover {
   padding: 0;
 }
 
-.phone {
+.footer-contacts-title, p {
   margin: 0;
   padding: 0;
+  display: flex;
+  align-items: center;
+  font-size: 25px;
+  font-weight: 500;
+  color: #fff;
 }
 
-.tel {}
+.footer-contacts-title {
+  font-size: 40px;
+  font-weight: 600;
+}
+
+.footer-contacts-img {
+  margin-right: 10px;
+  width: 25px;
+  height: 25px;
+}
+.footer-contacts, a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.footer-social-list {
+  display: flex;
+}
+
+.footer-social-list-item:not(:last-child) {
+  margin-right: 20px;
+}
+
+.footer-social-icon {
+  margin: 45px 0 0;
+  padding: 0; 
+  display: flex;
+  width: 40px;
+  height: 40px;
+}
+
+.footer-social-icon path{
+  fill: #fff;
+}
+.footer-social-icon path:hover{
+  fill: #216AF2;
+}
