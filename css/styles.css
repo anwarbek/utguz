@@ -270,7 +270,7 @@ svg:hover {
 }
 
 .sitenav__link {
-  font-style: 16px;
+  font-size: 22px;
   font-weight: 500;
   line-height: 1.5;
   text-decoration: none;
@@ -314,6 +314,8 @@ svg:hover {
 }
 
 .author-photo {
+  font-size: 15px;
+  color: #000;
   opacity: 0.4;
 }
 
