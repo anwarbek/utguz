@@ -391,6 +391,10 @@ svg:hover {
   align-items: center;
 }
 
+.news-content-img {
+  width: 810px;
+}
+
 .news-bottom {
   display: flex;
   flex-wrap: wrap;
@@ -425,8 +429,8 @@ svg:hover {
 .card-news-title {
   margin: 8px 0 auto 0;
   padding: 0;
-  font-size: 14px;
-  font-weight: 700;
+  font-size: 15px;
+  font-weight: 500;
   color: #000;
   text-decoration: none;
 }
